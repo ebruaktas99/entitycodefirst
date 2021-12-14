@@ -1,0 +1,34 @@
+﻿
+@model EntityMvcProje.Models.Sınıflar.Yetenekler
+
+<!--Yeteneklere ulaştık.-->
+
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+
+<form class="form-group" method="post">
+
+
+    <div style="margin-bottom:20px">
+
+        <label>Yetenek Açıklama</label>
+        @Html.TextAreaFor(x => x.ACIKLAMA, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-bottom:20px">
+        <label>Yetenek Değeri</label>
+        @Html.TextAreaFor(x => x.DEGER, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+
+        <button a href="/Admin/" class="btn btn-primary"> Kaydet</button>
+
+
+    </div>
+
+</form>

@@ -1,0 +1,40 @@
+﻿@using EntityMvcProje.Models.Sınıflar
+@model List<Yetenekler>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>YETENEK</th>
+            <th>DEĞER</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
+    </thead>
+
+    @foreach(var p in Model) {
+    <tbody>
+        <tr>
+
+            <td>@p.ID</td>
+            <td>@p.ACIKLAMA</td>
+            <td>@p.DEGER</td>
+            <td><a href="/Admin/YetenekSil/@p.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/YetenekGuncelle/@p.ID"class="btn btn-info">Güncelle</a></td>
+
+        </tr>
+    </tbody>
+    }
+</table>
+
+<br />
+
+

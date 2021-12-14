@@ -1,0 +1,31 @@
+﻿
+@model EntityMvcProje.Models.Sınıflar.Yetenekler
+
+@{
+    ViewBag.Title = "YetenekGuncelle";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<form class="form-group" method="post">
+
+
+    <div style="margin-bottom:20px">
+
+        <label>Yetenek Açıklama</label>
+        @Html.TextAreaFor(x => x.ACIKLAMA, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-bottom:20px">
+        <label>Yetenek Değeri</label>
+        @Html.TextAreaFor(x => x.DEGER, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+
+        <button class="btn btn-warning">Güncelle</button>
+
+
+    </div>
+
+</form>
